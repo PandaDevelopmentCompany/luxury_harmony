@@ -30,6 +30,7 @@
     <script src="js/scripts.js" defer></script>
 <link rel="stylesheet" href="assets/components/ajaxform/css/default.css" type="text/css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
  
@@ -41,55 +42,93 @@
 
 
         <!-- header -->
-        <header class="header">
-            <div class="inner-wrap">
-                <div class="logo-wrap">
-                    <a href="index.html" class="logo">
-                        <!-- <div class="elm-dots"><span></span></div>
-                        <div class="logo-title">Wall printing</div> -->
-                        <img src="img/logo_lhwi.jpg" alt="logo" class="logo_main">
-                    </a>
+
+<header class="header">
+    <div class="inner-wrap">
+        <div class="logo-wrap">
+            <a href="index.html" class="logo">
+                <img src="img/logo_lhwi.jpg" alt="logo" class="logo_main">
+            </a>
+        </div>
+        <div class="contacts-inner-wrap">
+            <div class="contacts-wrap">
+                <div class="phone-wrap">
+                    <a href="tel:+14099046176" class="link-phone main_link_contact">+1 409 904 6176 – Paul</a>
                 </div>
-                <div class="contacts-inner-wrap">
-                    <div class="contacts-wrap">
-                        <div class="phone-wrap">
-                            <a href="tel:+12533741120" class="link-phone main_link_contact">+1 253 374 11 20 – Paul</a>
-                        </div>
-                        <div class="email-wrap">
-                            <a href="mailto:contact@wallpapereagle.com" class="link-email link-main main_link_contact">contact@wallpapereagle.com</a>
-                        </div>
-                    </div>
-                    <!-- <div class="messages-wrap">
-                        <a href="https://wa.me/+12533470806" target="_blank" class="btn-action-ico button-soc">
-                            <img src="img/icons/soc-wa.svg" alt="">
-                        </a>
-                    </div> -->
-                </div>
-                <div class="popup-menu-wrap menu-wrap js-popup-wrap">
-                    <a href="" class="btn-popup btn-action-ico ico-menu js-btn-popup-toggle"><span></span></a>
-                    <div class="popup-content-block js-popup-block">
-                        <ul class="menu">
-                            <li><a href="#section01" class="js-anchor">Services</a></li>
-                            <li><a href="#section02" class="js-anchor">Pricing</a></li>
-                            <li><a href="#section04" class="js-anchor">Work examples</a></li>
-                            <li><a href="#section05" class="js-anchor">FAQ</a></li>
-                        </ul>
-                        
-                             <div class="toggle-theme-wrap">
-                            <a href="" class="btn-theme-toggle" onclick="document.body.classList.toggle('theme-light');return false;">
-                                <div class="button-ico">
-                                    <img src="img/icons/light.svg" alt="">
-                                </div>
-                                <div class="button-ico">
-                                    <img src="img/icons/dark.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        
-                    </div>
+                <div class="email-wrap">
+                    <a href="mailto:wallpaper.houston77@gmail.com" class="link-email link-main main_link_contact">wallpaper.houston77@gmail.com</a>
                 </div>
             </div>
-        </header>
+
+            <!-- Соцсети под контактами -->
+            <div class="social-links-header">
+                <a href="https://www.instagram.com/_luxury_harmony_?igsh=MWRjcHhkZ2JiaWF1ag%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/198jkp7WBx/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://yelp.to/SBj5uUDOn6" target="_blank"><i class="fab fa-yelp"></i></a>
+                <a href="https://yelp.to/2_ObouVyrz" target="_blank"><i class="fab fa-yelp"></i></a>
+                <a href="https://houston.craigslist.org/crs/d/houston-wallpaper-installation-fast/7870635792.html" target="_blank"><i class="fas fa-list"></i></a>
+                <a href="https://www.bazar.club/business/post/luxury-harmony-wallpaper-insta" target="_blank"><i class="fas fa-briefcase"></i></a>
+            </div>
+        </div>
+
+        <div class="popup-menu-wrap menu-wrap js-popup-wrap">
+            <a href="" class="btn-popup btn-action-ico ico-menu js-btn-popup-toggle"><span></span></a>
+            <div class="popup-content-block js-popup-block">
+                <ul class="menu">
+                    <li><a href="#section01" class="js-anchor">Services</a></li>
+                    <li><a href="#section02" class="js-anchor">Pricing</a></li>
+                    <li><a href="#section04" class="js-anchor">Work examples</a></li>
+                    <li><a href="#section05" class="js-anchor">FAQ</a></li>
+                </ul>
+                
+                <div class="toggle-theme-wrap">
+                    <a href="" class="btn-theme-toggle" onclick="document.body.classList.toggle('theme-light');return false;">
+                        <div class="button-ico">
+                            <img src="img/icons/light.svg" alt="">
+                        </div>
+                        <div class="button-ico">
+                            <img src="img/icons/dark.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+/* Соцсети под контактами */
+.social-links-header {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+.social-links-header a {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+/* Адаптив для мобилки */
+
+    .contacts-inner-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .social-links-header {
+        justify-content: flex-start;
+    }
+
+@media screen and (max-width: 768px) {
+    footer .social-links, footer .contacts-wrap {
+    justify-content: center;
+}
+}
+</style>
+
+
+<br>
         <!-- /header -->
 
         <!-- page -->
@@ -1160,61 +1199,89 @@
 
         <!-- footer -->
            <!-- footer -->
-        <footer class="footer" id="sectionfooter">
-            <div class="inner-wrap">
-                <div class="logo-wrap">
-                    <a href="index.html" class="logo">
-                        <img src="img/logo_lhwi.jpg" alt="logo" class="logo_main">
-                    </a>
-                    <div class="contacts-inner-wrap elm-hidden-mobile">
-                        <div class="contacts-wrap">
-                            <div class="phone-wrap">
-                              <a href="tel:+12533741120" class="link-phone main_link_contact">+1 253 374 11 20 – Paul</a>
-                            </div>
-                            <div class="email-wrap">
-                                 <a href="mailto:contact@wallpapereagle.com" class="link-email main_link_contact">contact@wallpapereagle.com</a>
-                            </div>
-                        </div>
-                    <a href="https://www.instagram.com/eaglewallpaper?igsh=MTd0bnNwbzc5NTMwNA==" target="_blank" class="btn-action-ico button-soc">
-                        <img src="img/icons/soc-inst.svg" alt="" style="margin-left: 0;">
-                    </a>
+
+<footer class="footer" id="sectionfooter">
+    <div class="inner-wrap">
+        <div class="logo-wrap">
+            <a href="index.html" class="logo">
+                <img src="img/logo_lhwi.jpg" alt="logo" class="logo_main">
+            </a>
+            <div class="contacts-inner-wrap elm-hidden-mobile">
+                <div class="contacts-wrap">
+                    <div class="phone-wrap">
+                        <a href="tel:+14099046176" class="link-phone main_link_contact">+1 409 904 6176 – Paul</a>
+                    </div>
+                    <div class="email-wrap">
+                        <a href="mailto:wallpaper.houston77@gmail.com" class="link-email main_link_contact">wallpaper.houston77@gmail.com</a>
                     </div>
                 </div>
-                <div class="contacts-inner-wrap elm-hidden-desktop">
-                    <div class="contacts-wrap">
-                        <br>
-                        <div class="phone-wrap">
-                            <a href="tel:+12533741120" class="link-phone main_link_contact">+1 253 374 11 20 – Paul</a>
-                        </div>
-                        <div class="email-wrap">
-                              <a href="mailto:contact@wallpapereagle.com" class="link-email main_link_contact">contact@wallpapereagle.com</a>
-                        </div>
-                    </div>
-                    <br>
-                    <a href="https://www.instagram.com/eaglewallpaper?igsh=MTd0bnNwbzc5NTMwNA==" target="_blank" class="btn-action-ico button-soc" style="margin: 0 auto;">
-                        <img src="img/icons/soc-inst.svg" alt="" style="">
-                    </a>
-                </div>
-                
-                <div class="info-inner-wrap">
-                    <p><a href="" onclick="document.getElementById('popup-text01').classList.add('active');document.body.classList.add('popup-open');return false;">User Agreement</a></p>
-                    <p><a href="" onclick="document.getElementById('popup-text02').classList.add('active');document.body.classList.add('popup-open');return false;">Privacy Policy</a></p>
-                </div>
-                <div class="copy-inner-wrap">
-                  <p style="font-size: 14px">©2025 WallPaperEagle.com  <br>All rights reserved.</p>
-                </div>
-                <div class="menu-inner-wrap">
-                    <ul class="menu">
-                       <li><a href="#section01" class="js-anchor">Services</a></li>
-                            <li><a href="#section02" class="js-anchor">Pricing</a></li>
-                        <li><a href="#sectionfooter">Contacts</a></li>
-                            <li><a href="#section04" class="js-anchor">Work examples</a></li>
-                        <li><a href="#section05">FAQ</a></li>
-                    </ul>
+
+                <!-- Социальные ссылки -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/_luxury_harmony_?igsh=MWRjcHhkZ2JiaWF1ag%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/198jkp7WBx/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://yelp.to/SBj5uUDOn6" target="_blank"><i class="fab fa-yelp"></i></a>
+                    <a href="https://yelp.to/2_ObouVyrz" target="_blank"><i class="fab fa-yelp"></i></a>
+                    <a href="https://houston.craigslist.org/crs/d/houston-wallpaper-installation-fast/7870635792.html" target="_blank"><i class="fas fa-list"></i></a>
+                    <a href="https://www.bazar.club/business/post/luxury-harmony-wallpaper-insta" target="_blank"><i class="fas fa-briefcase"></i></a>
                 </div>
             </div>
-            <a href="" class="btn button-att btn-action-ico ico-more btn-action-up" id="button-up"></a>
-        </footer>
+        </div>
+
+        <div class="contacts-inner-wrap elm-hidden-desktop">
+            <div class="contacts-wrap">
+                <br>
+                <div class="phone-wrap">
+                    <a href="tel:+14099046176" class="link-phone main_link_contact">+1 409 904 6176 – Paul</a>
+                </div>
+                <div class="email-wrap">
+                    <a href="mailto:wallpaper.houston77@gmail.com" class="link-email main_link_contact">wallpaper.houston77@gmail.com</a>
+                </div>
+            </div>
+            <br>
+            <!-- Социальные ссылки для мобильных -->
+            <div class="social-links" style="text-align:center;">
+                <a href="https://www.instagram.com/_luxury_harmony_?igsh=MWRjcHhkZ2JiaWF1ag%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/198jkp7WBx/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://yelp.to/SBj5uUDOn6" target="_blank"><i class="fab fa-yelp"></i></a>
+                <a href="https://yelp.to/2_ObouVyrz" target="_blank"><i class="fab fa-yelp"></i></a>
+                <a href="https://houston.craigslist.org/crs/d/houston-wallpaper-installation-fast/7870635792.html" target="_blank"><i class="fas fa-list"></i></a>
+                <a href="https://www.bazar.club/business/post/luxury-harmony-wallpaper-insta" target="_blank"><i class="fas fa-briefcase"></i></a>
+            </div>
+        </div>
+
+        <div class="info-inner-wrap">
+            <p><a href="" onclick="document.getElementById('popup-text01').classList.add('active');document.body.classList.add('popup-open');return false;">User Agreement</a></p>
+            <p><a href="" onclick="document.getElementById('popup-text02').classList.add('active');document.body.classList.add('popup-open');return false;">Privacy Policy</a></p>
+        </div>
+        <div class="copy-inner-wrap">
+            <p style="font-size: 14px">©2025 WallPaperEagle.com  <br>All rights reserved.</p>
+        </div>
+        <div class="menu-inner-wrap">
+            <ul class="menu">
+                <li><a href="#section01" class="js-anchor">Services</a></li>
+                <li><a href="#section02" class="js-anchor">Pricing</a></li>
+                <li><a href="#sectionfooter">Contacts</a></li>
+                <li><a href="#section04" class="js-anchor">Work examples</a></li>
+                <li><a href="#section05">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    <a href="" class="btn button-att btn-action-ico ico-more btn-action-up" id="button-up"></a>
+</footer>
+
+<style>
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+.social-links a {
+    font-size: 20px;
+    transition: color 0.3s;
+}
+</style>
+
         <!-- /footer -->
 
         <!-- /footer -->
@@ -1305,7 +1372,7 @@
                 <div class="popup-content-wrap inner-text">
                     <div class="popup-text-box">
 <h1>Terms and Conditions</h1>
-<p>Last updated: September 30, 2024</p>
+<p>Last updated: September 10, 2025</p>
 <p>Please read these terms and conditions carefully before using Our Service.</p>
 
 <h2>Interpretation and Definitions</h2>
@@ -1594,7 +1661,7 @@
 <h2>Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, You can contact us:</p>
 <ul>
-<li>By email: contact@wallpapereagle.com</li>
+<li>By email: wallpaper.houston77@gmail.com</li>
 </ul>
 
                     </div>
