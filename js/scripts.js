@@ -325,6 +325,12 @@ function sendForm(form, hasFile = false) {
             try {
                 await fetch(scriptURL, { method: 'POST', body: new URLSearchParams(payload) });
                 showToast('✅ Your message has been successfully sent!.');
+                            // gtag for google analitycs
+              if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18028418774/2iDYCJWQ-Z4cENatz5RD'
+        });
+    }
                 form.reset();
                 resetSliders();
             } catch(err) {
@@ -342,6 +348,13 @@ function sendForm(form, hasFile = false) {
         fetch(scriptURL, { method: 'POST', body: new URLSearchParams(payload) })
         .then(() => {
             showToast('✅ Your message has been successfully sent!.');
+
+            // gtag for google analitycs
+              if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18028418774/2iDYCJWQ-Z4cENatz5RD'
+        });
+    }
             form.reset();
             resetSliders();
         })
