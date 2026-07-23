@@ -20,10 +20,15 @@
 }
 /* Светлая тема (фон светлый → тень тёмная) */
 body.theme-light .logo {
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+    /*filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));*/
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
 }
 
 /* Тёмная тема (фон тёмный → тень светлая) */
 body:not(.theme-light) .logo {
-    filter: drop-shadow(5px 5px 5px rgba(255,255,255,0.3));
+    /*filter: drop-shadow(5px 5px 5px rgba(255,255,255,0.3));*/
+    /*box-shadow: 5px 5px 5px rgba(255,255,255,0.3);*/
 }
+
+
+
