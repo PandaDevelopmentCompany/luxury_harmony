@@ -209,10 +209,12 @@ togglePopupButtons.forEach(button => {
       });
 
       const swiperSliderProjects = new Swiper(".slider-projects .swiper", {
-          loop: true,
+          loop: false,
           slidesPerView: "auto",
           spaceBetween: 0,
           speed: 400,
+          preloadImages: false,
+          watchSlidesProgress: true,
           pagination: { el: ".slider-projects-pagination", clickable: true },
       });
   }
