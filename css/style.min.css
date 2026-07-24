@@ -13,22 +13,25 @@
     pointer-events: none !important;
 }
 
-
+.logo {
+    display: inline-block;
+    overflow: visible; /* обязательно */
+    border-radius: 10px;
+}
 
 .logo img {
-	border-radius: 10px !important;
+    display: block;
+    border-radius: 10px;
 }
-/* Светлая тема (фон светлый → тень тёмная) */
+
+/* Светлая тема */
 body.theme-light .logo {
-    /*filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));*/
-    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.3);*/
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Тёмная тема (фон тёмный → тень светлая) */
+/* Тёмная тема */
 body:not(.theme-light) .logo {
-    /*filter: drop-shadow(5px 5px 5px rgba(255,255,255,0.3));*/
-    /*box-shadow: 5px 5px 5px rgba(255,255,255,0.3);*/
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
 }
-
 
 
